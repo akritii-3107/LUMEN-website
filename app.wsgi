@@ -4,7 +4,7 @@ import sys
 import os
 
 # add the project directory to the sys.path
-project_home = u'/'
+project_home = u'/LUMEN-website/'
 if project_home not in sys.path:
     sys.path = [project_home] + sys.path
 
