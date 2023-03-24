@@ -4,16 +4,15 @@ app=Flask(__name__)
 
 base_url = "https://akritii-3107.github.io/LUMEN-website"
 
-@app.route('/')
+@app.route(base_url+'/')
 def index():
-    index_url = url_for("index", _external=True)
     return render_template("index.html")
 
-@app.route('/about')
+@app.route(base_url+'/about')
 def about():
     return render_template('about.html')
 
-@app.route('/contact')
+@app.route(base_url+'/contact')
 def contact():
     return render_template('contact.html')
 
