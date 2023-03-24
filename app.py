@@ -2,9 +2,12 @@ from flask import Flask,render_template
 
 app=Flask(__name__)
 
+base_url = "https://<your-username>.github.io/<your-repository-name>"
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    home_url = f"{base_url}/"
+    return render_template('index.html',about_url=home_url)
 
 @app.route('/about')
 def about():
