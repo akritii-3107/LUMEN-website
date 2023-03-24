@@ -7,7 +7,7 @@ base_url = "https://akritii-3107.github.io/LUMEN-website"
 @app.route('/')
 def index():
     index_url = url_for("index", _external=True)
-    return render_template("index.html", index_url=index_url, base_url=base_url)
+    return render_template("index.html")
 
 @app.route('/about')
 def about():
