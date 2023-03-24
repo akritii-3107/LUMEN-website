@@ -19,7 +19,7 @@ def contact():
 from flask import send_from_directory
 @app.route('/<path:path>')
 def serve_static(path):
-    return send_from_directory(app.static_folder, path)
+    return send_from_directory('static', path)
 
 
 if __name__ == '__main__':
