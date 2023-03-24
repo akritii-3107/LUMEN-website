@@ -1,13 +1,13 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,url_for
 
 app=Flask(__name__)
 
-base_url = "https://<your-username>.github.io/<your-repository-name>"
+base_url = "https://akritii-3107.github.io/LUMEN-website"
 
 @app.route('/')
 def index():
-    home_url = f"{base_url}/"
-    return render_template('index.html',about_url=home_url)
+    index_url = url_for("index", _external=True)
+    return render_template("index.html", index_url=index_url, base_url=base_url)
 
 @app.route('/about')
 def about():
